@@ -1,0 +1,61 @@
+﻿.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 0 80px;position:relative}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent 79px,rgba(0,212,255,.03) 80px),repeating-linear-gradient(0deg,transparent 0,transparent 79px,rgba(0,212,255,.03) 80px);mask-image:radial-gradient(circle at center,black 35%,transparent 90%);pointer-events:none}
+.hero-container{max-width:1200px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(0,255,136,.08);border:1px solid rgba(0,255,136,.2);border-radius:50px;padding:8px 18px;font-size:.82rem;font-weight:600;color:#00FF88;margin-bottom:28px;width:fit-content}
+.badge-dot{width:8px;height:8px;background:#00FF88;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,255,136,.4)}50%{box-shadow:0 0 0 6px rgba(0,255,136,0)}}
+.hero-name{font-family:var(--font-main);font-size:clamp(3rem,7vw,5.5rem);font-weight:800;line-height:.95;letter-spacing:-2px;margin-bottom:20px}
+.hero-name-accent{background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-role{height:32px;margin-bottom:24px;overflow:hidden}
+.role-text{font-size:1.15rem;font-weight:500;color:var(--primary);opacity:0;transform:translateY(8px);transition:all .4s ease;display:block}
+.role-text.visible{opacity:1;transform:translateY(0)}
+.hero-desc{color:var(--text-secondary);font-size:1rem;line-height:1.75;max-width:480px;margin-bottom:40px}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:52px}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:var(--bg-primary);border-radius:10px;font-weight:700;font-size:.95rem;text-decoration:none;transition:all var(--transition)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,212,255,.35)}
+.btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;background:transparent;border:1.5px solid var(--border-hover);color:var(--text-primary);border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;transition:all var(--transition)}
+.btn-secondary:hover{background:var(--bg-card-hover);border-color:var(--primary);transform:translateY(-2px)}
+.hero-stats{display:flex;align-items:center;gap:24px}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat-num{font-family:var(--font-main);font-size:1.8rem;font-weight:800;color:var(--primary);line-height:1}
+.stat-label{font-size:.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px}
+.stat-divider{width:1px;height:40px;background:var(--border)}
+
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.hero-avatar-wrap{position:relative;width:340px;height:340px}
+.avatar-ring{position:absolute;inset:-20px;border-radius:50%;border:1px solid var(--border);animation:spin 20s linear infinite}
+.avatar-ring-2{inset:-40px;border-color:rgba(124,58,237,.2);animation-duration:30s;animation-direction:reverse}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.hero-avatar{position:absolute;inset:0;border-radius:50%;background:linear-gradient(135deg,rgba(0,212,255,.1),rgba(124,58,237,.1));border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-avatar-img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+.hero-avatar-icon{font-size:7rem;color:rgba(0,212,255,.3)}
+.floating-badge{position:absolute;background:rgba(10,16,32,.9);border:1px solid var(--border);border-radius:10px;padding:8px 14px;font-size:.8rem;font-weight:600;color:var(--text-primary);backdrop-filter:blur(10px);white-space:nowrap;display:flex;align-items:center;gap:7px}
+.floating-badge i{color:var(--primary)}
+.fb-1{top:10%;right:-20px;animation:float 4s ease-in-out infinite}
+.fb-2{bottom:20%;left:-30px;animation:float 5s ease-in-out .5s infinite}
+.fb-3{bottom:5%;right:10%;animation:float 3.5s ease-in-out 1s infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+.hero-hud{position:absolute;left:-80px;bottom:10px;width:220px;background:rgba(10,16,32,.85);border:1px solid var(--border-hover);border-radius:10px;padding:12px 14px;backdrop-filter:blur(10px);box-shadow:0 12px 40px rgba(0,0,0,.35);overflow:hidden}
+.hero-hud::after{content:'';position:absolute;inset:-100% 0 auto 0;height:200%;background:linear-gradient(to bottom,transparent 45%,rgba(0,212,255,.09) 50%,transparent 55%);animation:hudscan 3.2s linear infinite}
+.hero-hud p{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.7rem;padding:7px 0;border-bottom:1px solid rgba(0,212,255,.1);position:relative;z-index:1}
+.hero-hud p:last-child{border-bottom:none}
+.hero-hud span{color:var(--text-muted);text-transform:uppercase;letter-spacing:.8px}
+.hero-hud strong{color:var(--primary);font-size:.73rem;letter-spacing:.3px}
+@keyframes hudscan{from{transform:translateY(-60%)}to{transform:translateY(60%)}}
+
+.hero-scroll-hint{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text-muted);font-size:.78rem;letter-spacing:2px;text-transform:uppercase;text-decoration:none;animation:bounce 2s ease-in-out infinite;transition:color var(--transition)}
+.hero-scroll-hint:hover{color:var(--primary)}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+@media(max-width:900px){
+  .hero-container{grid-template-columns:1fr;gap:48px;text-align:center}
+  .hero-desc{max-width:100%}
+  .hero-actions{justify-content:center}
+  .hero-stats{justify-content:center}
+  .hero-visual{display:none}
+}
+@media(max-width:600px){
+  .hero-container{padding:0 24px}
+  .hero-name{font-size:clamp(2.5rem,12vw,4rem)}
+}

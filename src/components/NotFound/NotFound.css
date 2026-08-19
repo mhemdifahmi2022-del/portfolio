@@ -1,0 +1,16 @@
+.nf-page{min-height:90vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:80px 24px}
+.nf-glow{position:absolute;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,255,.12),transparent 70%);pointer-events:none;animation:nfPulse 6s ease-in-out infinite}
+@keyframes nfPulse{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.1);opacity:1}}
+
+.nf-inner{position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px;max-width:480px}
+.nf-code{font-family:var(--font-main);font-size:8rem;font-weight:800;line-height:1;background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-4px}
+.nf-title{font-family:var(--font-main);font-size:1.8rem;font-weight:700;color:var(--text-primary)}
+.nf-desc{color:var(--text-secondary);font-size:1rem;line-height:1.7}
+
+.nf-btn{margin-top:8px;display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;font-weight:600;text-decoration:none;transition:transform var(--transition),box-shadow var(--transition);box-shadow:0 4px 20px rgba(0,212,255,.25)}
+.nf-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,212,255,.4)}
+
+@media(max-width:600px){
+  .nf-code{font-size:5.5rem}
+  .nf-title{font-size:1.4rem}
+}

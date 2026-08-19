@@ -1,0 +1,48 @@
+﻿.about-section{}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.bio-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;margin-bottom:24px}
+.bio-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,rgba(0,212,255,.15),rgba(124,58,237,.15));border:1px solid var(--border-hover);display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:1.6rem;color:var(--primary)}
+.bio-text{color:var(--text-secondary);line-height:1.8;font-size:.95rem;margin-bottom:16px}
+.bio-text strong{color:var(--text-primary)}
+.bio-info-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.bio-info-item{display:flex;align-items:center;gap:10px;font-size:.85rem;color:var(--text-secondary)}
+.bio-info-item i{color:var(--primary);width:14px}
+
+.subsection-title{font-family:var(--font-main);font-size:1rem;font-weight:600;color:var(--text-primary);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.subsection-title i{color:var(--primary)}
+
+.langues-section{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:24px}
+.langues-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.langue-item{}
+.langue-header{display:flex;justify-content:space-between;margin-bottom:8px}
+.langue-name{font-size:.88rem;font-weight:500;color:var(--text-primary)}
+.langue-label{font-size:.78rem;color:var(--primary);font-weight:600}
+.langue-dots{display:flex;gap:5px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--border);transition:background .3s}
+.dot.active{background:var(--primary)}
+
+.passions-section{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px}
+.passions-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.passion-card{display:flex;flex-direction:column;gap:2px;background:var(--bg-card-hover);border:1px solid var(--border);border-radius:var(--radius-sm);padding:14px;transition:all var(--transition)}
+.passion-card:hover{border-color:var(--border-hover)}
+.passion-card i{font-size:1.1rem;color:var(--primary);margin-bottom:4px}
+.passion-name{font-size:.88rem;font-weight:600;color:var(--text-primary)}
+.passion-sub{font-size:.78rem;color:var(--text-muted)}
+
+.about-skills{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;height:fit-content}
+.skills-list{display:flex;flex-direction:column;gap:20px}
+.skill-item{}
+.skill-header{display:flex;justify-content:space-between;margin-bottom:8px}
+.skill-name{font-size:.9rem;font-weight:500;color:var(--text-primary);display:flex;align-items:center;gap:8px}
+.skill-name i{color:var(--primary)}
+.skill-pct{font-size:.85rem;color:var(--primary);font-weight:700}
+.skill-bar-bg{height:6px;background:rgba(255,255,255,.05);border-radius:3px;overflow:hidden}
+.skill-bar-fill{height:100%;background:linear-gradient(90deg,var(--primary),var(--secondary));border-radius:3px;transition:width 1.2s cubic-bezier(.4,0,.2,1)}
+
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr}
+  .bio-info-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .langues-grid,.passions-grid{grid-template-columns:1fr}
+}
