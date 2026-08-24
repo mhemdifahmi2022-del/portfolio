@@ -37,6 +37,22 @@ const allProjects = [
     ]
   },
   {
+    id: 'hager-witty-park2', title: 'Parc de Recharge Hager Witty Park 2', year: 'BUT3 · Alternance · 2025-2026',
+    headline: "PROGRAMMATION D'UN PARC DE RECHARGE — HAGER WITTY PARK 2",
+    description: "Programmation et vérification des bornes de recharge : une mission quotidienne chez YES55. Avant qu'une borne ne quitte nos locaux, je la programme et je la teste intégralement (charge, paramètres) pour que le jour de la mise en service, l'installateur sur site n'ait plus qu'à raccorder le courant. Exemple sur ce parc : routeur Teltonika RUT200, délesteur Hager XEM520 et 3 bornes doubles Hager Witty Park 2 (6 connecteurs).",
+    tags: ['Hager Witty Park 2','OCPP','Teltonika RUT200','XEM520','EVOTA','RFID'],
+    link: '/projets/hager-witty-park2', color: '#FACC15', icon: 'fas fa-charging-station', size: 'large',
+    blocks: [
+      { type: 'text', content: "La programmation et la vérification des bornes de recharge font partie de mes tâches quotidiennes chez YES55. Avant qu'une borne ne quitte nos locaux, je la programme entièrement et je la teste : tests de charge et vérification de tous les paramètres. L'objectif est que, le jour de la mise en service, l'installateur sur place n'ait plus qu'à raccorder le courant — tout le reste est déjà configuré et validé depuis l'atelier." },
+      { type: 'text', content: "Je prends ici comme exemple une intervention type, réalisée le 9 juillet 2026 : la programmation d'un parc complet composé d'un routeur Teltonika RUT200, d'un délesteur Hager XEM520 et de 3 bornes doubles Hager Witty Park 2, soit 6 connecteurs à mettre en service. Le devis client précise le matériel commandé et les abonnements associés (carte SIM 4G, cartes RFID, points de charge)." },
+      { type: 'image', src: '/images/hager-witty-park2/fig-2-16-devis.png', caption: 'Le devis client YES55' },
+      { type: 'text', content: "Pour fiabiliser et accélérer la programmation lors des prochaines poses, j'ai rédigé une fiche de procédure dédiée à cette borne. Elle reprend, étape par étape, la mise en place, la configuration (ChargeboxID, serveur OCPP, modem LTE, APN), les tests (badges, charge) et le reconditionnement avant expédition." },
+      { type: 'image', src: '/images/hager-witty-park2/fig-2-17-fiche-procedure.png', caption: 'Fiche de procédure Hager Witty Park 2' },
+      { type: 'text', content: "Concrètement, je configure le routeur RUT200 (connexion 4G LTE établie), le délesteur XEM520 (mode dynamique, triphasé, mesure de courant), puis j'associe les 3 bornes à la supervision EVOTA avec leur identifiant OCPP. Je vérifie ensuite chaque borne en testant les cartes RFID sur les 6 connecteurs : les charges démarrent correctement et chaque connecteur remonte bien en statut « Charging ». Une fois tout validé, je pose les stickers YES55 et les repères de connecteurs, et je reconditionne la borne." },
+      { type: 'image', src: '/images/hager-witty-park2/fig-2-25-recap-visuel.png', caption: 'Récapitulatif visuel : câblage, interfaces de programmation, bornes, cartes et supervision' },
+    ]
+  },
+  {
     id: 'tri-postal', title: 'Système de Tri Postal Automatisé', year: 'BUT3',
     headline: "SYSTÈME DE TRI POSTAL AUTOMATISÉ — UNILOGIC / CODESYS",
     description: "Conception de l'IHM sous Unilogic pour piloter un système de tri postal automatisé, et programmation de l'automate sous CODESYS (SFC / GRAFCET) en binôme avec Axel Estienne. Quatre critères de qualité analysés en parallèle (matériau, perçage, rainure, poids), avec divergence/convergence en ET pour le parallélisme et logique de décision en OU pour l'évacuation.",
@@ -228,7 +244,7 @@ const allProjects = [
 export const butCompetences = {
   1: { concevoir: ['smartlight'], verifier: ['smartlight'], maintenir: [], integrer: [] },
   2: { concevoir: ['esat'], verifier: ['robot'], maintenir: ['esat'], integrer: ['hydro'] },
-  3: { concevoir: ['yes55'], verifier: ['yes55-integration-tests'], maintenir: ['hager-witty'], integrer: ['yes55-integration-tests'] },
+  3: { concevoir: ['yes55'], verifier: ['hager-witty-park2'], maintenir: ['hager-witty'], integrer: ['yes55-integration-tests'] },
 }
 
 const competencesByProject = {}
