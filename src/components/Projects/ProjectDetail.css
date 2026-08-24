@@ -72,6 +72,20 @@
   color: var(--text-primary);
 }
 
+.pd-headline a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pd-headline a:hover {
+  color: var(--primary);
+}
+
+.pd-headline a i {
+  font-size: .7em;
+  vertical-align: .12em;
+}
+
 /* Meta line under top bar */
 .pd-meta {
   display: flex;

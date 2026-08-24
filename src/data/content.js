@@ -7,7 +7,7 @@ const allProjects = [
     headline: "CONCEPTION DE L'ERP INTRAYES55",
     description: "Conception, développement et mise en production d'un ERP interne (intrayes55.fr) pour remplacer les fichiers Excel, centraliser les données métier et fiabiliser l'exploitation quotidienne.",
     tags: ['Node.js','Express','SQLite','JWT','Nginx','PM2','AWS EC2','IntraYES55'],
-    link: '/projets/yes55', color: '#00D4FF', icon: 'fas fa-charging-station', size: 'large',
+    link: '/projets/yes55', externalLink: 'https://intrayes55.fr', color: '#00D4FF', icon: 'fas fa-charging-station', size: 'large',
     blocks: [
       { type: 'text', content: "J'ai développé seul IntraYES55 sur 9 mois : frontend HTML/CSS/JS, API REST Node.js/Express et base SQLite. L'objectif était de créer un outil métier unique, rapide et simple à maintenir." },
       { type: 'image', src: '/images/intrayes55/intra-structure-code.png', caption: "Structure du code IntraYES55" },

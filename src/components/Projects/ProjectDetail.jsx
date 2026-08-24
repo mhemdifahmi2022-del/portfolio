@@ -130,7 +130,13 @@ export default function ProjectDetail() {
           </Link>
           <Link to="#" onClick={goBack} className="pd-pill">Projets</Link>
         </div>
-        <h1 className="pd-headline">{headline}</h1>
+        <h1 className="pd-headline">
+          {project.externalLink ? (
+            <a href={project.externalLink} target="_blank" rel="noreferrer">
+              {headline} <i className="fas fa-up-right-from-square" aria-hidden="true" />
+            </a>
+          ) : headline}
+        </h1>
       </header>
 
       <div className="pd-meta">
