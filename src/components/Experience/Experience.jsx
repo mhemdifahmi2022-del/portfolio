@@ -113,7 +113,9 @@ const butDetails = {
           { code: 'AC31.02 · CE1.02', label: "Produire l'ensemble des documents nécessaires pour le client et les différents prestataires" },
           { code: 'AC31.03 · CE1.03', label: 'Communiquer de façon adaptée avec les différents acteurs avant et pendant la phase de conception' },
         ],
-        why: "Le développement d'IntraYES55 m'a permis d'analyser le besoin métier, de sélectionner des solutions techniques adaptées, de produire la documentation du projet et de collaborer avec les équipes concernées. L'application étant déployée et utilisée en production, cette expérience justifie un niveau de maîtrise de 90 %." },
+        why: "Le développement d'IntraYES55 m'a permis d'analyser le besoin métier, de sélectionner des solutions techniques adaptées, de produire la documentation du projet et de collaborer avec les équipes concernées. L'application étant déployée et utilisée en production, cette expérience justifie un niveau de maîtrise de 90 %.",
+        link: 'https://intrayes55.fr',
+        linkLabel: 'Voir l’ERP IntraYES55' },
       { name: 'Vérifier', level: 'Niveau 3', color: '#f4976c', projectIds: butCompetences[3].verifier,
         acs: [
           { code: 'AC32.01', label: "Évaluer la cause racine d'un dysfonctionnement" },
@@ -370,6 +372,11 @@ export default function Experience() {
                     {comp.why && (
                       <p className="but-modal-comp-why">
                         <span className="but-modal-why-q" style={{ color: comp.color }}>Pourquoi {progressByName[comp.name]?.value ?? 0}% ?</span> {comp.why}
+                        {comp.link && (
+                          <a className="but-modal-why-link" href={comp.link} target="_blank" rel="noreferrer">
+                            {comp.linkLabel} <i className="fas fa-up-right-from-square" aria-hidden="true" />
+                          </a>
+                        )}
                       </p>
                     )}
                     {linked.length > 0 && (

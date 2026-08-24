@@ -72,18 +72,21 @@
   color: var(--text-primary);
 }
 
-.pd-headline a {
-  color: inherit;
+.pd-project-link {
+  text-align: center;
+}
+
+.pd-project-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-weight: 700;
   text-decoration: none;
 }
 
-.pd-headline a:hover {
-  color: var(--primary);
-}
-
-.pd-headline a i {
-  font-size: .7em;
-  vertical-align: .12em;
+.pd-project-link a:hover {
+  text-decoration: underline;
 }
 
 /* Meta line under top bar */

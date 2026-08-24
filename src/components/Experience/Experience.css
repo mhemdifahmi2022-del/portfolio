@@ -310,6 +310,20 @@
   margin-right: 4px;
 }
 
+.but-modal-why-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.but-modal-why-link:hover {
+  text-decoration: underline;
+}
+
 .but-modal-meter-row { display:flex; align-items:center; gap:12px; }
 
 .but-modal-meter-track {
