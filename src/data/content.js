@@ -288,6 +288,14 @@ export const experiences = [
 
 export const skills = [
   { name: 'Python', level: 90, icon: 'fab fa-python' },
+  { name: 'OCPP', level: 90, icon: 'fas fa-charging-station' },
+  { name: 'Modbus RTU', level: 80, icon: 'fas fa-network-wired' },
+  { name: 'CODESYS / GRAFCET', level: 85, icon: 'fas fa-gears' },
+  { name: 'API REST / JSON', level: 85, icon: 'fas fa-code' },
+  { name: 'Réseaux 4G/LTE', level: 80, icon: 'fas fa-signal' },
+  { name: 'Diagnostic firmware', level: 80, icon: 'fas fa-wrench' },
+  { name: 'Linux / Nginx / PM2', level: 75, icon: 'fas fa-server' },
+  { name: 'SQLite / JWT', level: 80, icon: 'fas fa-database' },
   { name: 'C / Arduino', level: 85, icon: 'fas fa-microchip' },
   { name: 'HTML / CSS / JS', level: 90, icon: 'fab fa-js' },
   { name: 'FastAPI', level: 85, icon: 'fas fa-server' },

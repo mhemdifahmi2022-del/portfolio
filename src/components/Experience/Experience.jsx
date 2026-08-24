@@ -23,10 +23,26 @@ const butDetails = {
       "l'algorithmique, la programmation en C et l'utilisation des microcontrôleurs",
     ],
     competences: [
-      { name: 'Concevoir', level: 'Niveau 1', text: 'Mener une conception partielle intégrant une démarche projet', color: '#c41e3a', projectIds: butCompetences[1].concevoir },
-      { name: 'Vérifier', level: 'Niveau 1', text: "Effectuer les tests et mesures nécessaires à une vérification d'un système", color: '#f4976c', projectIds: butCompetences[1].verifier },
-      { name: 'Maintenir', level: 'Niveau 0', text: 'Initiation', color: '#ffc94d', projectIds: butCompetences[1].maintenir },
-      { name: 'Intégrer', level: 'Niveau 0', text: 'Initiation', color: '#7cb342', projectIds: butCompetences[1].integrer },
+      { name: 'Concevoir', level: 'Niveau 1', color: '#c41e3a', projectIds: butCompetences[1].concevoir,
+        acs: [
+          { code: 'AC11.01', label: "Produire une analyse fonctionnelle d'un système simple" },
+          { code: 'AC11.02', label: 'Réaliser un prototype pour des solutions techniques matériel et/ou logiciel' },
+          { code: 'AC11.03', label: "Rédiger un dossier de conception à partir d'un cahier des charges partiel" },
+        ],
+        why: "Sur SmartLight j'ai couvert tout le cycle de conception : analyse fonctionnelle, prototype PCB conçu et soudé, puis dossier de conception rédigé à partir du cahier des charges. Les trois AC sont validés, d'où 100 %." },
+      { name: 'Vérifier', level: 'Niveau 1', color: '#f4976c', projectIds: butCompetences[1].verifier,
+        acs: [
+          { code: 'AC12.01', label: "Appliquer une procédure d'essais" },
+          { code: 'AC12.02', label: 'Identifier un dysfonctionnement' },
+          { code: 'AC12.03', label: 'Mesurer les dysfonctionnements' },
+        ],
+        why: "Sur SmartLight j'ai appliqué la procédure d'essais, identifié et mesuré les dysfonctionnements de la carte. Il me manque encore un peu de recul sur des campagnes de tests plus poussées, d'où 90 %." },
+      { name: 'Maintenir', level: 'Niveau 0', color: '#ffc94d', projectIds: butCompetences[1].maintenir,
+        acs: [],
+        why: "Compétence au niveau initiation en 1ʳᵉ année : aucun projet de maintenance n'a été réalisé, d'où 0 %." },
+      { name: 'Intégrer', level: 'Niveau 0', color: '#7cb342', projectIds: butCompetences[1].integrer,
+        acs: [],
+        why: "Compétence au niveau initiation en 1ʳᵉ année : aucune installation ni mise en service n'a été réalisée, d'où 0 %." },
     ],
     progress: [
       { name: 'Concevoir', value: 100, color: '#c41e3a' },
@@ -39,17 +55,39 @@ const butDetails = {
     period: '2024 — 2025',
     phase: 'Industrialisation et qualite',
     project: {
-      title: 'Projet phare: Convoyeur Niryo NED2',
+      title: 'Stage ESAT — Banc de test automatisé',
       impact: 'Integration robotique avec vision artificielle pour automatiser la prise de pieces.',
     },
     badge: 'Programme du parcours AII',
     badgeHref: '/prog-AII.pdf',
     quickTags: ['Concevoir N2', 'Vérifier N2', 'Maintenir N1', 'Intégrer N1'],
     competences: [
-      { name: 'Concevoir', level: 'Niveau 2', text: 'Concevoir un système en fiabilisant les solutions proposées', color: '#c41e3a', projectIds: butCompetences[2].concevoir },
-      { name: 'Vérifier', level: 'Niveau 2', text: "Mettre en place un protocole de tests pour valider le fonctionnement d'un système", color: '#f4976c', projectIds: butCompetences[2].verifier },
-      { name: 'Maintenir', level: 'Niveau 1', text: 'Intervenir sur un système pour effectuer une opération de maintenance', color: '#ffc94d', projectIds: butCompetences[2].maintenir },
-      { name: 'Intégrer', level: 'Niveau 1', text: 'Réaliser un système avec une démarche qualité conforme au dossier de fabrication', color: '#7cb342', projectIds: butCompetences[2].integrer },
+      { name: 'Concevoir', level: 'Niveau 2', color: '#c41e3a', projectIds: butCompetences[2].concevoir,
+        acs: [
+          { code: 'AC21.01', label: "Proposer des solutions techniques liées à l'analyse fonctionnelle" },
+          { code: 'AC21.02', label: 'Distinguer les solutions techniques retenues' },
+        ],
+        why: "Au stage ESAT j'ai proposé plusieurs solutions techniques pour le banc de test (PCB, Arduino, sécurité 230 V) et justifié celles retenues à partir de l'analyse fonctionnelle. Les deux AC sont validés, d'où 100 %." },
+      { name: 'Vérifier', level: 'Niveau 2', color: '#f4976c', projectIds: butCompetences[2].verifier,
+        acs: [
+          { code: 'AC22.01', label: "Identifier les tests et mesures à mettre en place pour valider le fonctionnement d'un système" },
+          { code: 'AC22.02', label: "Certifier le fonctionnement d'un nouvel équipement industriel" },
+        ],
+        why: "Sur le robot détecteur d'obstacles j'ai défini et mené les tests de validation. La certification complète d'un équipement industriel reste partielle, d'où 80 %." },
+      { name: 'Maintenir', level: 'Niveau 1', color: '#ffc94d', projectIds: butCompetences[2].maintenir,
+        acs: [
+          { code: 'AC13.01', label: "Exécuter l'entretien et le contrôle d'un système en respectant une procédure" },
+          { code: 'AC13.02', label: 'Exécuter une opération de maintenance (corrective, préventive, améliorative)' },
+          { code: 'AC13.03', label: "Identifier la cause racine d'un dysfonctionnement" },
+          { code: 'AC13.04', label: 'Identifier la cause racine du dysfonctionnement' },
+        ],
+        why: "Sur le banc ESAT j'ai diagnostiqué une surchauffe (cause racine : régulateur LM7812 à 93 °C) et réalisé une maintenance améliorative (radiateur + ventilateur) qui a supprimé les redémarrages. Cycle complet, d'où 100 %." },
+      { name: 'Intégrer', level: 'Niveau 1', color: '#7cb342', projectIds: butCompetences[2].integrer,
+        acs: [
+          { code: 'AC24.01AI', label: "Appliquer la procédure d'installation d'un système" },
+          { code: 'AC24.02AI', label: "Exécuter la mise en service d'un système en respectant la procédure" },
+        ],
+        why: "Sur la ferme hydroponique j'ai installé et mis en service le système (API, Modbus, pompes) selon le dossier de fabrication. Quelques réglages fins restaient à finaliser, d'où 90 %." },
     ],
     progress: [
       { name: 'Concevoir', value: 100, color: '#c41e3a' },
@@ -69,10 +107,35 @@ const butDetails = {
     intro: "Pour ma 3e année de BUT GEII, j'ai choisi le parcours alternance chez YES55.",
     intro2: "Mes missions: programmer et superviser des bornes de recharge EV, réaliser des tests d'intégration fabricants et développer IntraYES55 pour remplacer les anciens fichiers Excel et papier.",
     competences: [
-      { name: 'Concevoir', level: 'Niveau 3', text: 'Concevoir un système en adoptant une approche sélective dans ses choix technologiques', color: '#c41e3a', projectIds: butCompetences[3].concevoir },
-      { name: 'Vérifier', level: 'Niveau 3', text: "Élaborer une procédure intégrant une démarche qualité pour valider le fonctionnement d'un système", color: '#f4976c', projectIds: butCompetences[3].verifier },
-      { name: 'Maintenir', level: 'Niveau 2', text: 'Mettre en place une stratégie de maintenance pour garantir un fonctionnement optimal', color: '#ffc94d', projectIds: butCompetences[3].maintenir },
-      { name: 'Intégrer', level: 'Niveau 2', text: "Interagir avec les acteurs lors de l'installation et de la mise en service d'un système", color: '#7cb342', projectIds: butCompetences[3].integrer },
+      { name: 'Concevoir', level: 'Niveau 3', color: '#c41e3a', projectIds: butCompetences[3].concevoir,
+        acs: [
+          { code: 'AC31.01', label: "Adopter une approche holistique intégrant les innovations technologiques en lien avec la stratégie de l'entreprise" },
+          { code: 'AC31.02 · CE1.02', label: "Produire l'ensemble des documents nécessaires pour le client et les différents prestataires" },
+          { code: 'AC31.03 · CE1.03', label: 'Communiquer de façon adaptée avec les différents acteurs avant et pendant la phase de conception' },
+        ],
+        why: "IntraYES55 a été conçu de façon holistique (besoin métier, choix techno, documentation, échanges avec les équipes). La démarche est quasi complète et l'outil continue d'évoluer en production, d'où 90 %." },
+      { name: 'Vérifier', level: 'Niveau 3', color: '#f4976c', projectIds: butCompetences[3].verifier,
+        acs: [
+          { code: 'AC32.01', label: "Évaluer la cause racine d'un dysfonctionnement" },
+          { code: 'AC32.02', label: 'Proposer une solution corrective à un dysfonctionnement' },
+          { code: 'AC32.03', label: "Produire une procédure d'essais pour valider la conformité d'un système" },
+        ],
+        why: "Sur le parc Hager Witty Park 2 je programme et vérifie chaque borne (tests RFID, charge) et j'ai rédigé la procédure d'essais. Le cycle de vérification qualité est entièrement maîtrisé, d'où 100 %." },
+      { name: 'Maintenir', level: 'Niveau 2', color: '#ffc94d', projectIds: butCompetences[3].maintenir,
+        acs: [
+          { code: 'AC23.01', label: 'Proposer une solution de maintenance' },
+          { code: 'AC23.02', label: "Évaluer les coûts d'indisponibilité et de maintenance d'un système" },
+          { code: 'AC23.03', label: 'Produire une procédure de maintenance' },
+          { code: 'AC23.04', label: "Proposer un appui technique aux différents acteurs à l'échelle nationale et internationale" },
+        ],
+        why: "Sur les bornes Hager Witty XVL j'ai proposé et déployé une solution de maintenance (FTP + SteVe sur AWS), produit la procédure de reflash et fourni un appui technique, y compris en anglais avec la R&D. Cycle complet, d'où 100 %." },
+      { name: 'Intégrer', level: 'Niveau 2', color: '#7cb342', projectIds: butCompetences[3].integrer,
+        acs: [
+          { code: 'AC34.01AI', label: "Planifier l'installation et la mise en service d'un équipement" },
+          { code: 'AC34.02AI', label: "Produire une procédure d'installation et de mise en service d'un système" },
+          { code: 'AC34.03AI', label: 'Produire le dossier de conformité du système (versionnage)' },
+        ],
+        why: "Sur les tests d'intégration OCPP je planifie et valide la mise en service de chaque nouveau matériel, je produis les procédures et le dossier de conformité (verdict d'acceptation catalogue), d'où 100 %." },
     ],
     progress: [
       { name: 'Concevoir', value: 90, color: '#c41e3a' },
@@ -284,7 +347,18 @@ export default function Experience() {
                       <span className="but-modal-comp-name">{comp.name}</span>
                       <span className="but-modal-comp-level">{comp.level}</span>
                     </div>
-                    <p className="but-modal-comp-text">{comp.text}</p>
+                    {comp.acs && comp.acs.length > 0 ? (
+                      <ul className="but-modal-comp-acs">
+                        {comp.acs.map(ac => (
+                          <li key={ac.code}>
+                            <span className="but-modal-ac-code" style={{ color: comp.color, borderColor: comp.color }}>{ac.code}</span>
+                            <span className="but-modal-ac-label">{ac.label}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="but-modal-comp-text">Initiation — compétence non abordée cette année.</p>
+                    )}
                     <div className="but-modal-meter-row">
                       <div className="but-modal-meter-track">
                         <div className="but-modal-meter-fill" style={{ width: `${progressByName[comp.name]?.value ?? 0}%`, background: comp.color }} />
@@ -293,6 +367,11 @@ export default function Experience() {
                         {progressByName[comp.name]?.value ?? 0}%
                       </span>
                     </div>
+                    {comp.why && (
+                      <p className="but-modal-comp-why">
+                        <span className="but-modal-why-q" style={{ color: comp.color }}>Pourquoi {progressByName[comp.name]?.value ?? 0}% ?</span> {comp.why}
+                      </p>
+                    )}
                     {linked.length > 0 && (
                       <div className="but-modal-comp-footer">
                         <span className="but-modal-comp-count">

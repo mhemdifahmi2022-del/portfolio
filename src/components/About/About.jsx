@@ -36,6 +36,9 @@ export default function About() {
               <p className="bio-text">
                 Passionné par l'électronique embarquée, le développement logiciel et l'automatisation. Je cherche à concevoir des systèmes intelligents qui répondent à de vrais besoins techniques.
               </p>
+              <p className="bio-text">
+                J'ai été accepté pour un <strong>cycle d'ingénieur par apprentissage à l'école d'ingénieurs ISEN à Toulon</strong>, en alternance avec <strong>YES55</strong> sur 3 ans, qui débutera le <strong>31 août 2026</strong>.
+              </p>
               <div className="bio-info-grid">
                 <div className="bio-info-item"><i className="fas fa-map-marker-alt" /><span>Toulon, 83000</span></div>
                 <div className="bio-info-item"><i className="fas fa-envelope" /><span>mhemdi.fahmi2022@gmail.com</span></div>
