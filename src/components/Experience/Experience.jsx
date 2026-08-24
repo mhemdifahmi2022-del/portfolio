@@ -113,7 +113,7 @@ const butDetails = {
           { code: 'AC31.02 · CE1.02', label: "Produire l'ensemble des documents nécessaires pour le client et les différents prestataires" },
           { code: 'AC31.03 · CE1.03', label: 'Communiquer de façon adaptée avec les différents acteurs avant et pendant la phase de conception' },
         ],
-        why: "IntraYES55 a été conçu de façon holistique (besoin métier, choix techno, documentation, échanges avec les équipes). La démarche est quasi complète et l'outil continue d'évoluer en production, d'où 90 %." },
+        why: "Le développement d'IntraYES55 m'a permis d'analyser le besoin métier, de sélectionner des solutions techniques adaptées, de produire la documentation du projet et de collaborer avec les équipes concernées. L'application étant déployée et utilisée en production, cette expérience justifie un niveau de maîtrise de 90 %." },
       { name: 'Vérifier', level: 'Niveau 3', color: '#f4976c', projectIds: butCompetences[3].verifier,
         acs: [
           { code: 'AC32.01', label: "Évaluer la cause racine d'un dysfonctionnement" },
